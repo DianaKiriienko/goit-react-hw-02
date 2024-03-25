@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Description from './components/Description'
 import Options from './components/Options'
 import Feedback from './components/Feedback'
+import Notification from './components/Notification'
 
 const App = () => {
   const [feedbacks, setFeedbacks] = useState(() => {
@@ -41,7 +42,7 @@ const App = () => {
         total={totalFeedback}
         positivePercentage={positivePercentage}/>)
       : (
-        <p>No feedback yet</p>
+        <Notification/>
       )}
 
     </>
